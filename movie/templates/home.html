@@ -17,6 +17,25 @@
     </form>
     <p>Searching for {{ searchTerm }}</p>
 
+    <form action="{% url 'signup' %}">
+    <div class="mb-3">
+        <label for="email" class="form-label">
+            Sign Up for our email list
+        </label>
+
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+        >
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Sign Up
+    </button>
+</form>
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
         {% for movie in movies %}

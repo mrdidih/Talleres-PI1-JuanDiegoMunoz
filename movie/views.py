@@ -159,3 +159,14 @@ def statistics_view(request):
             'graphic_genre': graphic_genre
         }
     )
+
+def signup(request):
+    email = request.GET.get('email')
+
+    return render(
+        request,
+        'signup.html',
+        {
+            'email': email
+        }
+    )
